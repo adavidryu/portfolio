@@ -1,11 +1,9 @@
 import SideNav from '../components/SideNav';
 import ContentArea from '../components/ContentArea';
-import WaveBackground from '../components/WaveBackground';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex relative">
-      <WaveBackground />
       <SideNav currentPage="about" />
       
       <ContentArea>
