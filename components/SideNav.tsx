@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 
 interface SideNavProps {
-  currentPage: 'about' | 'work' | 'contact';
+  currentPage: 'about' | 'projects' | 'contact';
 }
 
 export default function SideNav({ currentPage }: SideNavProps) {
@@ -19,9 +19,9 @@ export default function SideNav({ currentPage }: SideNavProps) {
   }, []);
 
   const navItems = [
-    { id: 'about', label: 'About', href: '/', icon: '👋' },
-    { id: 'work', label: 'Work', href: '/work', icon: '💼' },
-    { id: 'contact', label: 'Contact', href: '/contact', icon: '📧' }
+    { id: 'about', label: '/about', href: '/', icon: '👋' },
+    { id: 'projects', label: '/projects', href: '/projects', icon: '💼' },
+    { id: 'contact', label: '/contact', href: '/contact', icon: '📧' }
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function SideNav({ currentPage }: SideNavProps) {
             Adam Ryu
           </h1>
           <p className="text-sm text-muted-foreground">
-            Full Stack Developer
+            CS @ Texas A&M Univ.
           </p>
         </div>
 

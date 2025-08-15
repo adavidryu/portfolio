@@ -21,18 +21,18 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              I'm a passionate developer focused on creating meaningful digital experiences. 
-              I build beautiful, functional applications that make a difference.
+              I'm a passionate student and developer focused on creating meaningful digital experiences. 
+              My goal is to change and improve lives, with tech.
             </p>
           </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3">
             <a 
-              href="/work" 
+              href="/projects" 
               className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
-              View My Work
+              View My Projects
             </a>
             
             <button className="px-6 py-3 border border-border text-foreground rounded-lg hover:bg-muted transition-colors">
@@ -49,7 +49,7 @@ export default function Home() {
             
             <div className="text-center">
               <div className="text-2xl font-bold text-foreground mb-1">10+</div>
-              <div className="text-sm text-muted-foreground">Projects Built</div>
+              <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
             
             <div className="text-center">

@@ -2,16 +2,16 @@ import SideNav from '../../components/SideNav';
 import ContentArea from '../../components/ContentArea';
 import WaveBackground from '../../components/WaveBackground';
 
-export default function Work() {
+export default function Projects() {
   return (
     <div className="min-h-screen bg-background text-foreground flex relative">
       <WaveBackground />
-      <SideNav currentPage="work" />
+      <SideNav currentPage="projects" />
       
       <ContentArea>
         <section className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            My Work
+            My Projects
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl">
             Here's a collection of projects I've worked on. Each one represents 
