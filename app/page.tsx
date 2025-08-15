@@ -40,21 +40,105 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-foreground mb-1">3+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
-            </div>
+          {/* Work Experience */}
+          <div className="pt-8">
+            <h3 className="text-xl font-semibold mb-8 text-foreground">Experience</h3>
             
-            <div className="text-center">
-              <div className="text-2xl font-bold text-foreground mb-1">10+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+            {/* Current/Most Recent Position - Spotlight */}
+            <div className="mb-10 p-6 border border-border rounded-lg bg-muted/30">
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
+                <div>
+                  <h4 className="text-lg font-semibold text-foreground mb-1">
+                    Software Development Intern
+                  </h4>
+                  <p className="text-primary font-medium mb-2">Engineering Technology & Industrial Distribution at Texas A&M University</p>
+                  <p className="text-sm text-muted-foreground">
+                    College Station, TX • Full-time
+                  </p>
+                </div>
+                <div className="mt-2 lg:mt-0">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400">
+                    Most Recent Position
+                  </span>
+                  <p className="text-sm text-muted-foreground mt-1 lg:text-right">
+                    May 2025 - August 2025
+                  </p>
+                </div>
+              </div>
+              
+              <div className="space-y-2 mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Lead development of scalable web applications serving 100K+ users. Architected microservices 
+                  infrastructure and mentored junior developers in modern React patterns.
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-2">
+                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Next.js</span>
+                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">TypeScript</span>
+                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Supabase / PostgreSQL</span>
+                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">MediaPipe</span>
+              </div>
             </div>
-            
-            <div className="text-center">
-              <div className="text-2xl font-bold text-foreground mb-1">∞</div>
-              <div className="text-sm text-muted-foreground">Ideas & Counting</div>
+
+            {/* Previous Positions Timeline */}
+            <div className="space-y-6">
+              {/* Position 2 */}
+              <div className="flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-3 h-3 bg-primary rounded-full"></div>
+                  <div className="w-px h-full bg-border mt-2"></div>
+                </div>
+                <div className="flex-1 pb-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                    <div>
+                      <h4 className="font-medium text-foreground">Full Stack Developer</h4>
+                      <p className="text-sm text-primary">StartupXYZ</p>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1 sm:mt-0">
+                      Jun 2021 - Dec 2022
+                    </p>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Built responsive web applications and RESTful APIs. Improved application 
+                    performance by 40% through code optimization and caching strategies.
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">Vue.js</span>
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">Python</span>
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">Django</span>
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Position 3 */}
+              <div className="flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-3 h-3 bg-muted-foreground rounded-full"></div>
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                    <div>
+                      <h4 className="font-medium text-foreground">Junior Web Developer</h4>
+                      <p className="text-sm text-primary">Digital Agency Co.</p>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1 sm:mt-0">
+                      Aug 2020 - May 2021
+                    </p>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Developed client websites and landing pages. Collaborated with design team 
+                    to implement pixel-perfect UI components and ensure cross-browser compatibility.
+                  </p>
+                  <div className="flex flex-wrap gap-1">
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">HTML/CSS</span>
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">JavaScript</span>
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">WordPress</span>
+                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">PHP</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
