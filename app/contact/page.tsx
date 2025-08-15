@@ -40,7 +40,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">
                 Get In Touch
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
