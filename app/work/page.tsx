@@ -1,12 +1,14 @@
 import SideNav from '../../components/SideNav';
+import ContentArea from '../../components/ContentArea';
+import WaveBackground from '../../components/WaveBackground';
 
 export default function Work() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex">
+    <div className="min-h-screen bg-background text-foreground flex relative">
+      <WaveBackground />
       <SideNav currentPage="work" />
-
-      {/* Main Content */}
-      <main className="flex-1 ml-64 p-12">
+      
+      <ContentArea>
         <section className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             My Work
@@ -125,7 +127,7 @@ export default function Work() {
             </a>
           </div>
         </section>
-      </main>
+      </ContentArea>
     </div>
   );
 }

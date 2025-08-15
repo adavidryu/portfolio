@@ -1,30 +1,64 @@
 import SideNav from '../components/SideNav';
+import ContentArea from '../components/ContentArea';
+import WaveBackground from '../components/WaveBackground';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex">
+    <div className="min-h-screen bg-background text-foreground flex relative">
+      <WaveBackground />
       <SideNav currentPage="about" />
+      
+      <ContentArea>
+        <div className="space-y-12">
+          {/* Hero Section */}
+          <div className="space-y-6">
+            <div className="inline-flex items-center px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">
+              Available for opportunities
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground">
+              Hi, I'm Adam.
+            </h1>
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+              I'm a passionate developer focused on creating meaningful digital experiences. 
+              I build beautiful, functional applications that make a difference.
+            </p>
+          </div>
 
-      {/* Main Content */}
-      <main className="flex-1 ml-64 p-12">
-        <section className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Hi, I'm Adam.
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl">
-            I'm a passionate developer focused on creating meaningful digital experiences. 
-            This is where you can share your story, background, and what drives you.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href="/work" className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-center">
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a 
+              href="/work" 
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+            >
               View My Work
             </a>
-            <button className="px-6 py-3 border border-border rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors">
+            
+            <button className="px-6 py-3 border border-border text-foreground rounded-lg hover:bg-muted transition-colors">
               Download Resume
             </button>
           </div>
-        </section>
-      </main>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-foreground mb-1">3+</div>
+              <div className="text-sm text-muted-foreground">Years Experience</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-2xl font-bold text-foreground mb-1">10+</div>
+              <div className="text-sm text-muted-foreground">Projects Built</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="text-2xl font-bold text-foreground mb-1">∞</div>
+              <div className="text-sm text-muted-foreground">Ideas & Counting</div>
+            </div>
+          </div>
+        </div>
+      </ContentArea>
     </div>
   );
 }

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import SideNav from '../../components/SideNav';
+import ContentArea from '../../components/ContentArea';
+import WaveBackground from '../../components/WaveBackground';
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -31,11 +33,11 @@ export default function Contact() {
     }
   };
   return (
-    <div className="min-h-screen bg-background text-foreground flex">
+    <div className="min-h-screen bg-background text-foreground flex relative">
+      <WaveBackground />
       <SideNav currentPage="contact" />
-
-      {/* Main Content */}
-      <main className="flex-1 ml-64 p-12">
+      
+      <ContentArea>
         <section className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
@@ -212,7 +214,7 @@ export default function Contact() {
             </div>
           </div>
         </section>
-      </main>
+      </ContentArea>
 
       {/* Success Modal */}
       {isSubmitted && (
