@@ -7,14 +7,19 @@ export default function Projects() {
       <SideNav currentPage="projects" />
       
       <ContentArea>
-        <section className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            My Projects
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl">
-            Here's a collection of projects I've worked on. Each one represents 
-            a unique challenge and learning experience.
-          </p>
+        <section className="max-w-4xl">
+          <div className="space-y-4">
+            <div className="inline-flex items-center px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">
+              Constantly building
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              My Projects
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl">
+              Here's a collection of projects I've worked on. Each one represents 
+              a unique challenge and learning experience.
+            </p>
+          </div>
           
           {/* Projects Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

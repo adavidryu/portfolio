@@ -9,7 +9,7 @@ export default function Home() {
       <ContentArea>
         <div className="space-y-12">
           {/* Hero Section */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div className="inline-flex items-center px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">
               Available for opportunities
             </div>
@@ -106,34 +106,6 @@ export default function Home() {
                     <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">Python</span>
                     <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">Django</span>
                     <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">MySQL</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Position 3 */}
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 bg-muted-foreground rounded-full"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <div>
-                      <h4 className="font-medium text-foreground">Junior Web Developer</h4>
-                      <p className="text-sm text-primary">Digital Agency Co.</p>
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1 sm:mt-0">
-                      Aug 2020 - May 2021
-                    </p>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Developed client websites and landing pages. Collaborated with design team 
-                    to implement pixel-perfect UI components and ensure cross-browser compatibility.
-                  </p>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">HTML/CSS</span>
-                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">JavaScript</span>
-                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">WordPress</span>
-                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">PHP</span>
                   </div>
                 </div>
               </div>
