@@ -1,7 +1,33 @@
 import SideNav from '../../components/SideNav';
 import ContentArea from '../../components/ContentArea';
+import ProjectCard from '../../components/ProjectCard';
 
 export default function Projects() {
+  // Sample project data - you can move this to a separate file later
+  const projects = [
+    {
+      title: "Programmy",
+      description: "A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features a clean design, smooth animations, and optimized performance.",
+      technologies: ["React", "Next.js", "TypeScript", "Tailwind", "Amazon Bedrock", "AWS S3", "Auth0"],
+      liveUrl: "https://your-portfolio.com",
+      githubUrl: "https://github.com/adavidryu/portfolio"
+    },
+    {
+      title: "Mr. Calendar",
+      description: "Full-stack e-commerce solution with user authentication, payment processing, and admin dashboard. Built with modern web technologies.",
+      technologies: ["JavaScript", "Google Calendar API", "Discord API"],
+      liveUrl: "https://your-ecommerce.com",
+      githubUrl: "https://github.com/adavidryu/ecommerce"
+    },
+    {
+      title: "H.AI.R",
+      description: "Collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface.",
+      technologies: ["HTML", "CSS", "JavaScript", "Python"],
+      liveUrl: "https://your-taskapp.com",
+      githubUrl: "https://github.com/adavidryu/taskapp"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground flex relative">
       <SideNav currentPage="projects" />
@@ -23,97 +49,16 @@ export default function Projects() {
           
           {/* Projects Grid */}
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Project Card Template */}
-            <div className="border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-muted rounded-lg mb-4"></div>
-              <h3 className="text-xl font-semibold mb-2">Project Title</h3>
-              <p className="text-muted-foreground mb-4">
-                Brief description of the project and technologies used.
-              </p>
-              <div className="flex gap-2 mb-4">
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-sm rounded">
-                  React
-                </span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-sm rounded">
-                  TypeScript
-                </span>
-              </div>
-              <div className="flex gap-3">
-                <a 
-                  href="#" 
-                  className="text-sm text-primary hover:underline"
-                >
-                  Live Demo
-                </a>
-                <a 
-                  href="#" 
-                  className="text-sm text-primary hover:underline"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-
-            {/* Duplicate cards for demo */}
-            <div className="border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-muted rounded-lg mb-4"></div>
-              <h3 className="text-xl font-semibold mb-2">Another Project</h3>
-              <p className="text-muted-foreground mb-4">
-                Description of another project showcasing different skills.
-              </p>
-              <div className="flex gap-2 mb-4">
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-sm rounded">
-                  Next.js
-                </span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-sm rounded">
-                  Tailwind
-                </span>
-              </div>
-              <div className="flex gap-3">
-                <a 
-                  href="#" 
-                  className="text-sm text-primary hover:underline"
-                >
-                  Live Demo
-                </a>
-                <a 
-                  href="#" 
-                  className="text-sm text-primary hover:underline"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
-
-            <div className="border border-border rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="aspect-video bg-muted rounded-lg mb-4"></div>
-              <h3 className="text-xl font-semibold mb-2">Third Project</h3>
-              <p className="text-muted-foreground mb-4">
-                Yet another project demonstrating various capabilities.
-              </p>
-              <div className="flex gap-2 mb-4">
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-sm rounded">
-                  Vue.js
-                </span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-sm rounded">
-                  Node.js
-                </span>
-              </div>
-              <div className="flex gap-3">
-                <a 
-                  href="#" 
-                  className="text-sm text-primary hover:underline"
-                >
-                  Live Demo
-                </a>
-                <a 
-                  href="#" 
-                  className="text-sm text-primary hover:underline"
-                >
-                  GitHub
-                </a>
-              </div>
-            </div>
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                liveUrl={project.liveUrl}
+                githubUrl={project.githubUrl}
+              />
+            ))}
           </div>
 
           {/* Call to Action */}
