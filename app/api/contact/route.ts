@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const message = String(incoming.get('message') ?? '').trim();
     const subjectInput = String(incoming.get('_subject_custom') ?? '').trim();
     const resendApiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_TO_EMAIL || 'adamryu.work@gmail.com';
+    const toEmail = process.env.CONTACT_TO_EMAIL;
     const fromEmail = process.env.CONTACT_FROM_EMAIL || 'Portfolio Contact <onboarding@resend.dev>';
 
     if (!name || !email || !message) {
@@ -17,6 +17,9 @@ export async function POST(request: Request) {
     }
     if (!resendApiKey) {
       return NextResponse.json({ error: 'Contact service is not configured.' }, { status: 500 });
+    }
+    if (!toEmail) {
+      return NextResponse.json({ error: 'Contact recipient email is not configured.' }, { status: 500 });
     }
 
     const safeSubject = subjectInput || 'New Portfolio Contact Form Submission';

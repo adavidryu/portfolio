@@ -55,10 +55,8 @@ export default function Contact() {
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">Overview</p>
               <div className="mt-5 space-y-4 text-sm">
                 <div className="border-l-2 border-border pl-3">
-                  <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Email</p>
-                  <a href="mailto:adamryu.work@gmail.com" className="mt-1 inline-block font-medium hover:underline">
-                    adamryu.work@gmail.com
-                  </a>
+                  <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Contact</p>
+                  <p className="mt-1 font-medium">Adam Ryu</p>
                 </div>
                 <div className="border-l-2 border-border pl-3">
                   <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Location</p>

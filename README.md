@@ -24,7 +24,7 @@ Create a `.env.local` file in the project root with:
 
 ```bash
 RESEND_API_KEY=re_xxxxxxxxx
-CONTACT_TO_EMAIL=adamryu.work@gmail.com
+CONTACT_TO_EMAIL=your-email@example.com
 # Optional: use your verified sender/domain in Resend dashboard
 CONTACT_FROM_EMAIL="Portfolio Contact <onboarding@resend.dev>"
 ```
