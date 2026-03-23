@@ -1,6 +1,7 @@
  'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import SideNav from '../components/SideNav';
 import ContentArea from '../components/ContentArea';
 
@@ -68,22 +69,34 @@ export default function Home() {
       <ContentArea>
         <div className="space-y-8 md:space-y-10">
           <section className="section-wrap text-center md:text-left">
-            <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-tight md:mx-0 md:text-6xl">
-              Product-minded engineer. Ambitious CS student.
-            </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg">
-              I design, build, and ship products that help people and produce results.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
-              <a href="/projects" className="action-link">
-                View projects
-              </a>
-              <a href="/garage" className="action-link">
-                Explore my garage
-              </a>
-              <a href="/contact" className="action-link">
-                Start a conversation
-              </a>
+            <div className="grid items-center gap-6 md:grid-cols-[1fr_auto] md:gap-8">
+              <div>
+                <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-tight md:mx-0 md:text-6xl">
+                  Product-minded engineer.<br />Ambitious CS student.
+                </h1>
+                <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg">
+                  I design, build, and ship products that help people and produce results.
+                </p>
+
+                <div className="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
+                  <a href="/projects" className="action-link">
+                    View projects
+                  </a>
+                  <a href="/garage" className="action-link">
+                    Explore my garage
+                  </a>
+                  <a href="/contact" className="action-link">
+                    Start a conversation
+                  </a>
+                </div>
+              </div>
+
+              <div className="relative hidden md:flex md:items-center md:justify-end">
+                <span className="absolute -left-24 top-1/2 -translate-y-1/2 text-sm font-medium text-muted-foreground">my dog! -&gt;</span>
+                <div className="relative h-36 w-36 overflow-hidden rounded-full border-2 border-accent/60 bg-secondary shadow-sm">
+                  <Image src="/dog.jpg" alt="My dog" fill sizes="96px" className="object-cover" />
+                </div>
+              </div>
             </div>
           </section>
 

@@ -33,6 +33,17 @@ Notes:
 - In production, set these environment variables in your host (e.g. Vercel).
 - For best deliverability, verify your own sending domain in Resend and update `CONTACT_FROM_EMAIL`.
 
+## Garage TikTok Embeds
+
+For reliable TikTok embeds in production, configure explicit video URLs (instead of scraping latest posts):
+
+```bash
+TIKTOK_VIDEO_URLS=https://www.tiktok.com/@q50ryu/video/1111111111111111111,https://www.tiktok.com/@q50ryu/video/2222222222222222222,https://www.tiktok.com/@q50ryu/video/3333333333333333333
+```
+
+- Add up to 7 links (comma-separated).
+- The app extracts video IDs and renders embeds directly.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

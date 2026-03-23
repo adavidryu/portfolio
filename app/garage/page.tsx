@@ -1,69 +1,30 @@
 import SideNav from '../../components/SideNav';
 import ContentArea from '../../components/ContentArea';
 
-interface TikTokVideo {
+interface TikTokEmbed {
   id: string;
-  description: string;
+  url: string;
 }
 
-async function getRecentTikToks(username: string, limit = 7): Promise<TikTokVideo[]> {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 1800);
+function getConfiguredTikToks(limit = 7): TikTokEmbed[] {
+  const configured = process.env.TIKTOK_VIDEO_URLS || '';
+  const urls = configured
+    .split(',')
+    .map((url) => url.trim())
+    .filter(Boolean)
+    .slice(0, limit);
 
-  try {
-    const response = await fetch(`https://www.tiktok.com/@${username}`, {
-      next: { revalidate: 900 },
-      signal: controller.signal,
-      headers: {
-        'user-agent':
-          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-      },
-    });
-
-    if (!response.ok) return [];
-
-    const html = await response.text();
-    const marker = '<script id="__UNIVERSAL_DATA_FOR_REHYDRATION__" type="application/json">';
-    const start = html.indexOf(marker);
-    if (start === -1) return [];
-
-    const scriptStart = start + marker.length;
-    const scriptEnd = html.indexOf('</script>', scriptStart);
-    if (scriptEnd === -1) return [];
-
-    const jsonText = html.slice(scriptStart, scriptEnd).trim();
-    if (!jsonText) return [];
-
-    const parsed = JSON.parse(jsonText) as {
-      __DEFAULT_SCOPE__?: {
-        'webapp.user-detail'?: {
-          itemInfo?: {
-            itemStruct?: Array<{ id?: string; desc?: string; createTime?: string | number }>;
-          };
-        };
-      };
-    };
-
-    const itemStruct = parsed.__DEFAULT_SCOPE__?.['webapp.user-detail']?.itemInfo?.itemStruct ?? [];
-    const sorted = itemStruct
-      .filter((item) => item.id)
-      .sort((a, b) => Number(b.createTime ?? 0) - Number(a.createTime ?? 0))
-      .slice(0, limit)
-      .map((item) => ({
-        id: String(item.id),
-        description: item.desc?.trim() || 'Recent instructional clip',
-      }));
-
-    return sorted;
-  } catch {
-    return [];
-  } finally {
-    clearTimeout(timeout);
-  }
+  return urls
+    .map((url) => {
+      const match = url.match(/\/video\/(\d+)/);
+      if (!match) return null;
+      return { id: match[1], url };
+    })
+    .filter((item): item is TikTokEmbed => Boolean(item));
 }
 
 export default async function Garage() {
-  const recentVideos = await getRecentTikToks('q50ryu', 7);
+  const recentVideos = getConfiguredTikToks(7);
 
   return (
     <div className="min-h-screen bg-background text-foreground flex relative">
@@ -107,17 +68,24 @@ export default async function Garage() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       />
                     </div>
-                    <p className="line-clamp-3 text-sm text-muted-foreground">{video.description}</p>
+                    <a
+                      href={video.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground underline-offset-4 hover:underline"
+                    >
+                      View on TikTok
+                    </a>
                   </article>
                 ))}
               </div>
             ) : (
               <div className="mt-8 border-l-2 border-border pl-4">
                 <p className="text-sm text-muted-foreground">
-                  Could not auto-load recent videos right now. Use the link above to view the latest posts on TikTok.
+                  TikTok embeds are configured from `TIKTOK_VIDEO_URLS` (comma-separated video links) in environment variables.
                 </p>
                 <p className="mt-2 text-xs text-muted-foreground">
-                  If you are on a school or work network, TikTok embeds may be blocked by firewall policy.
+                  Add your latest 7 `https://www.tiktok.com/@q50ryu/video/...` links and redeploy.
                 </p>
               </div>
             )}
