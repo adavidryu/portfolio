@@ -71,17 +71,17 @@ export default async function Garage() {
 
       <ContentArea>
         <section className="space-y-12">
-          <div className="section-wrap">
-            <h1 className="max-w-4xl text-4xl font-semibold leading-tight md:text-5xl">
+          <div className="section-wrap text-center md:text-left">
+            <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-tight md:mx-0 md:text-5xl">
               Maintenance, mods, and repairs.<br />My love for wrenching.
             </h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:mx-0">
               I find joy in doing hands-on projects for both my car and motorcycle, making instructional videos to inspire and educate DIYers at home.
             </p>
           </div>
 
           <div className="section-rule">
-            <div className="flex flex-wrap items-end justify-between gap-3">
+            <div className="flex flex-wrap items-end justify-center gap-3 md:justify-between">
               <div>
                 <h2 className="text-2xl font-semibold md:text-3xl">Latest from @q50ryu</h2>
               </div>

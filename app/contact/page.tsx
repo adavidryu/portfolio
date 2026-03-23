@@ -43,9 +43,9 @@ export default function Contact() {
 
       <ContentArea>
         <section className="space-y-12">
-          <div className="section-wrap">
+          <div className="section-wrap text-center md:text-left">
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Let&apos;s get in touch.</h1>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:mx-0">
               Share project ideas, job opportunities, or anything else! I&apos;ll reply ASAP.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Contact() {
               </div>
             </aside>
 
-            <div className="border-l border-border pl-0 sm:pl-6 lg:pl-8">
+            <div className="pl-0 sm:pl-6 lg:border-l lg:border-border lg:pl-8">
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>

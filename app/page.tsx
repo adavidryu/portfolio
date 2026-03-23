@@ -67,14 +67,14 @@ export default function Home() {
 
       <ContentArea>
         <div className="space-y-8 md:space-y-10">
-          <section className="section-wrap">
-            <h1 className="max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
+          <section className="section-wrap text-center md:text-left">
+            <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-tight md:mx-0 md:text-6xl">
               Product-minded engineer. Ambitious CS student.
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg">
               I design, build, and ship products that help people and produce results.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
               <a href="/projects" className="action-link">
                 View projects
               </a>
@@ -88,13 +88,13 @@ export default function Home() {
           </section>
 
           <section className="section-rule">
-            <div className="flex flex-wrap items-end justify-between gap-4">
+            <div className="flex flex-wrap items-end justify-center gap-4 md:justify-between">
               <div>
                 <h2 className="mt-4 text-2xl font-semibold md:text-3xl">Experience timeline</h2>
               </div>
             </div>
 
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-4 flex flex-wrap justify-center gap-2 md:justify-start">
               <button
                 type="button"
                 onClick={() => setExperienceTab('professional')}
@@ -150,7 +150,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="section-rule flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <section className="section-rule flex flex-col items-center gap-5 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <div>
               <p className="text-2xl font-semibold">Got something for me?</p>
               <p className="mt-2 text-sm text-muted-foreground">
