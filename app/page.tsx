@@ -5,115 +5,80 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground flex relative">
       <SideNav currentPage="about" />
-      
+
       <ContentArea>
-        <div className="space-y-12">
-          {/* Hero Section */}
-          <div className="space-y-4">
-            <div className="inline-flex items-center px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">
-              Available for opportunities
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground">
-              Hi, I'm Adam.
+        <div className="space-y-12 md:space-y-14">
+          <section className="section-wrap px-1 sm:px-2">
+            <span className="eyebrow">Open to opportunities</span>
+            <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
+              Product-minded engineer. Ambitious CS student.
             </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              I'm a passionate student and developer focused on creating meaningful digital experiences. 
-              My goal is to change and improve lives, with tech.
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              I design and ship practical web experiences that prioritize clarity, speed, and measurable impact.
+              Replace this paragraph with your final intro narrative when ready.
             </p>
-          </div>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="/projects" className="action-link bg-foreground text-background hover:bg-foreground/90">
+                See projects
+              </a>
+              <a href="/garage" className="action-link">
+                Explore garage lab
+              </a>
+              <a href="/contact" className="action-link">
+                Start a conversation
+              </a>
+            </div>
+          </section>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a 
-              href="/projects" 
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
-            >
-              View My Projects
-            </a>
-            
-            <button className="px-6 py-3 border border-border text-foreground rounded-lg hover:bg-muted transition-colors">
-              Download Resume
-            </button>
-          </div>
-
-          {/* Work Experience */}
-          <div className="pt-8">
-            <h3 className="text-xl font-semibold mb-8 text-foreground">Experience</h3>
-            
-            {/* Current/Most Recent Position - Spotlight */}
-            <div className="mb-10 p-6 border border-border rounded-lg bg-muted/30">
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
-                <div>
-                  <h4 className="text-lg font-semibold text-foreground mb-1">
-                    Software Development Intern
-                  </h4>
-                  <p className="text-primary font-medium mb-2">Engineering Technology & Industrial Distribution at Texas A&M University</p>
-                  <p className="text-sm text-muted-foreground">
-                    College Station, TX • Full-time
-                  </p>
-                </div>
-                <div className="mt-2 lg:mt-0">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400">
-                    Most Recent Position
-                  </span>
-                  <p className="text-sm text-muted-foreground mt-1 lg:text-right">
-                    May 2025 - August 2025
-                  </p>
-                </div>
+          <section className="section-rule">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <span className="eyebrow">Selected experience</span>
+                <h2 className="mt-4 text-2xl font-semibold md:text-3xl">Recent roles</h2>
               </div>
-              
-              <div className="space-y-2 mb-4">
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                Built Yotion.ai, a yoga form-correction app that helps people improve their exercise accuracy in real time. 
-                The platform combines computer vision, beautiful user experience, and AI feedback to deliver performance tracking and personalized insights. 
-                I led a team through the full development cycle, bringing the app from concept to commercial readiness.
+              <a href="/projects" className="action-link">
+                View build work
+              </a>
+            </div>
+
+            <div className="mt-8 space-y-4">
+              <article className="border border-border p-5">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="text-lg font-medium">Software Development Intern</h3>
+                  <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">May 2025 - Aug 2025</p>
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Engineering Technology & Industrial Distribution at Texas A&M University
                 </p>
-              </div>
-              
-              <div className="flex flex-wrap gap-2">
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">React</span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Next.js</span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">TypeScript</span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Supabase / PostgreSQL</span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">MediaPipe</span>
-                <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Tailwind</span>
-              </div>
-            </div>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  Built Yotion.ai, a real-time yoga form-correction product from concept to commercial-ready delivery.
+                </p>
+              </article>
 
-            {/* Previous Positions Timeline */}
-            <div className="space-y-6">
-              {/* Position 2 */}
-              <div className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-3 h-3 bg-primary rounded-full"></div>
-                  <div className="w-px h-full bg-border mt-2"></div>
+              <article className="border border-border p-5">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <h3 className="text-lg font-medium">Software Engineering Fellow</h3>
+                  <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Jul 2024 - Sep 2024</p>
                 </div>
-                <div className="flex-1 pb-6">
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
-                    <div>
-                      <h4 className="font-medium text-foreground">Software Engineering Fellow</h4>
-                      <p className="text-sm text-primary">Headstarter</p>
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-1 sm:mt-0">
-                      Jul 2024 - Sep 2024
-                    </p>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-3">
-                    Built responsive web applications and RESTful APIs. Improved application 
-                    performance by 40% through code optimization and caching strategies.
-                  </p>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">React</span>
-                    <span className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded">Next.js</span>
-                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">Firebase</span>
-                    <span className="px-2 py-0.5 bg-secondary text-secondary-foreground text-xs rounded">Material UI</span>
-                  </div>
-                </div>
-              </div>
+                <p className="mt-2 text-sm text-muted-foreground">Headstarter</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  Built responsive web apps and APIs with measurable performance improvements.
+                </p>
+              </article>
             </div>
-          </div>
+          </section>
+
+          <section className="section-rule flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-2xl font-semibold">Got something for me?</p>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Share your thoughts or opportunities. I&apos;ll follow up quickly.
+              </p>
+            </div>
+            <a href="/contact" className="action-link bg-accent text-accent-foreground hover:bg-accent/90">
+              Contact me
+            </a>
+          </section>
         </div>
       </ContentArea>
     </div>
