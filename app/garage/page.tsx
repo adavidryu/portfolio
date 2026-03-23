@@ -72,8 +72,7 @@ export default async function Garage() {
       <ContentArea>
         <section className="space-y-12">
           <div className="section-wrap">
-            <span className="eyebrow">Garage Lab</span>
-            <h1 className="mt-5 max-w-4xl text-4xl font-semibold leading-tight md:text-5xl">
+            <h1 className="max-w-4xl text-4xl font-semibold leading-tight md:text-5xl">
               Maintenance, mods, and repairs.<br />My love for wrenching.
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
@@ -84,14 +83,13 @@ export default async function Garage() {
           <div className="section-rule">
             <div className="flex flex-wrap items-end justify-between gap-3">
               <div>
-                <span className="eyebrow">Recent videos</span>
-                <h2 className="mt-4 text-2xl font-semibold md:text-3xl">Latest from @q50ryu</h2>
+                <h2 className="text-2xl font-semibold md:text-3xl">Latest from @q50ryu</h2>
               </div>
               <a
                 href="https://www.tiktok.com/@q50ryu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="action-link"
+                className="action-link action-link--accent"
               >
                 Open TikTok profile
               </a>

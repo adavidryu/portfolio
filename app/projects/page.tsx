@@ -34,13 +34,11 @@ export default function Projects() {
       <ContentArea>
         <section className="space-y-12">
           <div className="section-wrap">
-            <span className="eyebrow">Project archive</span>
-            <h1 className="mt-5 text-4xl font-semibold leading-tight md:text-5xl">
-              Product work focused on utility, performance, and clarity.
+            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
+              Passion projects and hackathon builds.
             </h1>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              This section uses starter structure with placeholders where you can add richer project stories,
-              metrics, and screenshots.
+              A sneak peek into problems I&apos;ve attacked, the innovative solutions, and my technical skills.
             </p>
           </div>
 
@@ -64,7 +62,7 @@ export default function Projects() {
                 I&apos;d love to hear your ideas and contribute to something great.
               </p>
             </div>
-            <a href="/contact" className="action-link bg-foreground text-background hover:bg-foreground/90">
+            <a href="/contact" className="action-link action-link--accent">
               Start a project conversation
             </a>
           </div>

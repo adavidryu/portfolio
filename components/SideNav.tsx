@@ -26,7 +26,7 @@ export default function SideNav({ currentPage }: SideNavProps) {
           </Link>
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="inline-flex items-center gap-2 border border-border px-3 py-2 text-xs font-medium uppercase tracking-[0.1em]"
+            className="inline-flex items-center gap-2 border border-accent/40 bg-accent/10 px-3 py-2 text-xs font-medium uppercase tracking-[0.1em] hover:bg-accent/20"
           >
             Menu
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ export default function SideNav({ currentPage }: SideNavProps) {
               onClick={() => setIsOpen(false)}
               className={`border px-3 py-2 text-sm font-medium transition-colors ${
                 currentPage === item.id
-                  ? 'border-foreground bg-foreground text-background'
+                  ? 'border-accent bg-accent/20 text-foreground'
                   : 'border-border hover:bg-secondary'
               }`}
             >
@@ -73,7 +73,7 @@ export default function SideNav({ currentPage }: SideNavProps) {
       <aside className="fixed left-0 top-0 z-40 hidden h-screen w-72 border-r border-border bg-sidebar lg:flex lg:flex-col">
         <div className="border-b border-sidebar-border px-8 py-9">
           <Link href="/" className="block">
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-sidebar-foreground">Adam Ryu</p>
+            <p className="text-sm font-bold uppercase tracking-[0.32em] text-sidebar-foreground">Adam Ryu</p>
             <p className="mt-2 text-sm text-muted-foreground">CS @ Texas A&M University</p>
           </Link>
         </div>
@@ -86,7 +86,7 @@ export default function SideNav({ currentPage }: SideNavProps) {
                 href={item.href}
                 className={`block border px-4 py-3 text-sm font-medium uppercase tracking-[0.08em] transition-colors ${
                   currentPage === item.id
-                    ? 'border-sidebar-foreground bg-sidebar-foreground text-sidebar'
+                    ? 'border-accent bg-accent/20 text-sidebar-foreground'
                     : 'border-sidebar-border text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-foreground'
                 }`}
               >
@@ -123,8 +123,6 @@ export default function SideNav({ currentPage }: SideNavProps) {
               </svg>
             </a>
           </div>
-
-          <p className="text-xs text-muted-foreground">Open to internships and freelance work in 2026.</p>
         </div>
       </aside>
     </>

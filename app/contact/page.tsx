@@ -18,7 +18,7 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://formsubmit.co/adamryu.work@gmail.com', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         body: formData,
       });
@@ -44,8 +44,7 @@ export default function Contact() {
       <ContentArea>
         <section className="space-y-12">
           <div className="section-wrap">
-            <span className="eyebrow">Contact</span>
-            <h1 className="mt-5 text-4xl font-semibold leading-tight md:text-5xl">Let&apos;s get in touch.</h1>
+            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Let&apos;s get in touch.</h1>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
               Share project ideas, job opportunities, or anything else! I&apos;ll reply ASAP.
             </p>
@@ -67,17 +66,13 @@ export default function Contact() {
                 </div>
                 <div className="border-l-2 border-border pl-3">
                   <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Response time</p>
-                  <p className="mt-1 font-medium">Within 48 hours</p>
+                  <p className="mt-1 font-medium">Within 24 hours</p>
                 </div>
               </div>
             </aside>
 
             <div className="border-l border-border pl-0 sm:pl-6 lg:pl-8">
               <form onSubmit={handleSubmit} className="space-y-5">
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission" />
-                <input type="hidden" name="_template" value="table" />
-
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="mb-2 block text-sm font-medium">Name *</label>
@@ -136,7 +131,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex w-full items-center justify-center border border-foreground bg-foreground px-5 py-3 text-sm font-medium text-background transition-colors hover:bg-foreground/90 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex w-full items-center justify-center border border-accent/45 bg-accent/15 px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent hover:bg-accent/25 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
@@ -183,7 +178,7 @@ export default function Contact() {
               </p>
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="action-link bg-foreground text-background hover:bg-foreground/90"
+                className="action-link action-link--accent"
               >
                 Back to form
               </button>
