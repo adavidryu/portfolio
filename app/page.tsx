@@ -17,12 +17,18 @@ interface ExperienceItem {
 
 const professionalExperiences: ExperienceItem[] = [
   {
+    role: 'Software Engineer Intern',
+    org: 'Toyota Financial Services',
+    period: 'Current',
+    summary: 'Incoming..',
+    isMostRecent: true,
+  },
+  {
     role: 'Tech Fellow',
     org: 'CodePath',
     period: 'Jan 2026 - Present',
     summary:
       'Supporting 500+ students in technical interview prep across data structures, algorithms, and programming.',
-    isMostRecent: true,
   },
   {
     role: 'Software Engineer Intern',
