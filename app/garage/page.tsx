@@ -1,25 +1,7 @@
 import SideNav from '../../components/SideNav';
 import ContentArea from '../../components/ContentArea';
-import TikTokCreatorEmbed from '../../components/TikTokCreatorEmbed';
-
-interface TikTokVideo {
-  id: string;
-  url: string;
-}
-
-function getConfiguredVideos(limit = 9): TikTokVideo[] {
-  const raw = process.env.TIKTOK_VIDEO_URLS || '';
-  return raw
-    .split(',')
-    .map((u) => u.trim())
-    .filter(Boolean)
-    .slice(0, limit)
-    .reduce<TikTokVideo[]>((acc, url) => {
-      const match = url.match(/\/video\/(\d+)/);
-      if (match) acc.push({ id: match[1], url });
-      return acc;
-    }, []);
-}
+import TikTokVideoGrid from '../../components/TikTokVideoGrid';
+import { getTikTokVideos } from '../../lib/tiktok';
 
 const stats = [
   { label: 'Followers', value: '6.4K' },
@@ -27,17 +9,8 @@ const stats = [
   { label: 'Views (7-video streak)', value: '1.7M+' },
 ];
 
-const topics = [
-  { label: 'Oil changes', icon: '🔧' },
-  { label: 'Spark plugs', icon: '⚡' },
-  { label: 'Coilovers', icon: '🏎' },
-  { label: 'Vinyl wraps', icon: '🎨' },
-  { label: 'Brake work', icon: '🛑' },
-  { label: 'Moto mods', icon: '🏍' },
-];
-
 export default function Garage() {
-  const videos = getConfiguredVideos(9);
+  const videos = getTikTokVideos(8);
 
   return (
     <div className="min-h-screen bg-background text-foreground flex relative">
@@ -59,26 +32,10 @@ export default function Garage() {
             {/* Stats row */}
             <div className="mt-6 flex flex-wrap justify-center gap-4 md:justify-start">
               {stats.map((s) => (
-                <div key={s.label} className="border border-border bg-secondary/50 px-4 py-2.5 text-center">
+                <div key={s.label} className="rounded-lg bg-secondary/50 px-4 py-2.5 text-center ring-1 ring-border/50">
                   <p className="text-lg font-semibold">{s.value}</p>
                   <p className="mt-0.5 text-[11px] uppercase tracking-[0.1em] text-muted-foreground">{s.label}</p>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* ── Topics ───────────────────────────────────────── */}
-          <section className="section-rule">
-            <p className="eyebrow">What I cover</p>
-            <div className="mt-4 flex flex-wrap gap-2">
-              {topics.map((t) => (
-                <span
-                  key={t.label}
-                  className="inline-flex items-center gap-1.5 border border-border bg-secondary/60 px-3 py-1.5 text-sm text-foreground"
-                >
-                  <span aria-hidden="true">{t.icon}</span>
-                  {t.label}
-                </span>
               ))}
             </div>
           </section>
@@ -104,38 +61,7 @@ export default function Garage() {
             </div>
 
             <div className="mt-8">
-              {videos.length > 0 ? (
-                /* Individual video iframes (set via TIKTOK_VIDEO_URLS env var) */
-                <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-                  {videos.map((video) => (
-                    <a
-                      key={video.id}
-                      href={video.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group block border border-border bg-secondary/30 transition-colors hover:border-foreground/30"
-                    >
-                      <div className="overflow-hidden bg-muted">
-                        <iframe
-                          src={`https://www.tiktok.com/embed/v2/${video.id}`}
-                          title={`TikTok video ${video.id}`}
-                          className="h-[560px] w-full pointer-events-none"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          sandbox="allow-scripts allow-same-origin allow-popups"
-                        />
-                      </div>
-                      <p className="px-3 py-2 text-xs text-muted-foreground transition-colors group-hover:text-foreground">
-                        Watch on TikTok ↗
-                      </p>
-                    </a>
-                  ))}
-                </div>
-              ) : (
-                /* Creator profile embed — renders the full video grid from TikTok */
-                <div className="overflow-hidden border border-border bg-secondary/20">
-                  <TikTokCreatorEmbed />
-                </div>
-              )}
+              <TikTokVideoGrid videos={videos} />
             </div>
           </section>
 
