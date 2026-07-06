@@ -19,30 +19,30 @@ const professionalExperiences: ExperienceItem[] = [
   {
     role: 'Software Engineer Intern',
     org: 'Toyota Financial Services',
-    period: 'Current',
-    summary: 'Incoming..',
+    period: 'Mar 2026 – Present · Plano, TX',
+    summary: 'Joining the engineering team at Toyota\'s financial services hub to build and scale products used by Toyota customers across North America.',
     isMostRecent: true,
   },
   {
     role: 'Tech Fellow',
     org: 'CodePath',
-    period: 'Jan 2026 - Present',
+    period: 'Jan 2026 – Present',
     summary:
-      'Supporting 500+ students in technical interview prep across data structures, algorithms, and programming.',
+      'Supporting 500+ students in technical interview prep, enhancing their practical data structures, algorithms, and programming skills.',
   },
   {
     role: 'Software Engineer Intern',
     org: 'Texas A&M University',
-    period: 'May 2025 - Aug 2025',
+    period: 'May 2025 – Aug 2025',
     summary:
-      'Led a 4-person team to build a full-stack, market-ready fitness form-correction app using MediaPipe, an LLM, and modern frameworks.',
+      'Led a 4-person team to build a full-stack, market-ready fitness form correction app using MediaPipe computer vision, an LLM, and modern frameworks.',
   },
   {
     role: 'Software Engineer Fellow',
     org: 'Headstarter',
-    period: 'Jul 2024 - Sep 2024',
+    period: 'Jul 2024 – Sep 2024',
     summary:
-      'Built 4 AI projects with modern tools through project-based learning, competitions, networking, and career development.',
+      'Built 4 AI projects using Next.js and modern tools through Headstarter, sharpening skills via project-based learning, competitions, networking, and career development.',
   },
 ];
 
@@ -50,7 +50,7 @@ const leadershipExperiences: ExperienceItem[] = [
   {
     role: 'Workshops Officer',
     org: 'Aggie Coding Club (Texas A&M University)',
-    period: 'Apr 2025 - Present',
+    period: 'Apr 2025 – Present',
     summary:
       'Coordinate outreach and hands-on coding workshops that bring new and experienced builders together through shared technical passion.',
     isMostRecent: true,
@@ -58,7 +58,7 @@ const leadershipExperiences: ExperienceItem[] = [
   {
     role: 'Engineering Peer Mentor',
     org: 'Texas A&M University',
-    period: 'Add dates',
+    period: 'Aug 2023 – May 2024',
     summary:
       'Mentored 30+ first-year engineering students through weekly sessions on academics, career planning, and campus support resources.',
   },
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="grid items-center gap-6 md:grid-cols-[1fr_auto] md:gap-8">
               <div>
                 <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-tight md:mx-0 md:text-6xl">
-                  Product-minded engineer.<br />Ambitious CS student.
+                  Product-minded engineer.<br />Driven CS student.
                 </h1>
                 <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground md:mx-0 md:text-lg">
                   I design, build, and ship products that help people and produce results.

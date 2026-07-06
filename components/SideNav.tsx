@@ -74,7 +74,7 @@ export default function SideNav({ currentPage }: SideNavProps) {
         <div className="border-b border-sidebar-border px-8 py-9">
           <Link href="/" className="block">
             <p className="text-sm font-bold uppercase tracking-[0.32em] text-sidebar-foreground">Adam Ryu</p>
-            <p className="mt-2 text-sm text-muted-foreground">CS @ Texas A&M University</p>
+            <p className="mt-2 text-sm text-muted-foreground">SWE Intern @ Toyota · CS @ Texas A&M</p>
           </Link>
         </div>
 

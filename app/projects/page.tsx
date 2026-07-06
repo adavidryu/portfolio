@@ -10,7 +10,8 @@ export default function Projects() {
       timeframe: '2026',
       highlight: 'Solves menu decision paralysis with dish-first reviews so people know what to order, not just where to eat.',
       githubUrl: 'https://github.com/adavidryu/bytez',
-      imageUrl: '/bytez.png'
+      imageUrl: '/bytez.png',
+      award: 'TAMUHack 2026 — Recognized',
     },
     {
       title: 'Capital One Together',
@@ -27,7 +28,15 @@ export default function Projects() {
       highlight: 'Gives CS students exam practice problems that mimic the format seen in class and course material.',
       githubUrl: 'https://github.com/adavidryu/programmy.ai',
       imageUrl: '/programmy.png'
-    }
+    },
+    {
+      title: 'Google Calendar Discord Bot',
+      technologies: ['Discord.js', 'Google Calendar API', 'Node.js'],
+      timeframe: '2025',
+      highlight: 'Brings Google Calendar directly into Discord servers, letting student orgs manage events via simple chat commands.',
+      githubUrl: 'https://github.com/adavidryu/gcalendar-discord-bot',
+      award: '1st Place — University Hackathon',
+    },
   ];
 
   return (
@@ -55,6 +64,7 @@ export default function Projects() {
                 highlight={project.highlight}
                 githubUrl={project.githubUrl}
                 imageUrl={project.imageUrl}
+                award={project.award}
               />
             ))}
           </div>
