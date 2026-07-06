@@ -159,9 +159,25 @@
   }
 
   .status-chip {
-    @apply inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em];
+    @apply inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.12em];
     border-color: oklch(0.76 0.1 248 / 0.55);
     background-color: oklch(0.94 0.04 248 / 0.62);
     color: oklch(0.33 0.08 248);
+  }
+
+  .status-chip::before {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 9999px;
+    background-color: oklch(0.55 0.18 248);
+    animation: pulse-dot 2.2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.75); }
   }
 }

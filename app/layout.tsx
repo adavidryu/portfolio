@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Adam Ryu | Software Engineer",
-  description: "Portfolio of Adam Ryu featuring projects, experience, and contact information.",
+  description: "Adam Ryu — SWE Intern at Toyota Financial Services, Tech Fellow at CodePath, and CS student at Texas A&M. Builder of products that help people.",
 };
 
 export default function RootLayout({
