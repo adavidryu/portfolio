@@ -55,6 +55,7 @@ export default function Projects() {
                 highlight={project.highlight}
                 githubUrl={project.githubUrl}
                 imageUrl={project.imageUrl}
+                award={project.award}
               />
             ))}
           </div>
