@@ -44,27 +44,27 @@ export default function Contact() {
       <ContentArea>
         <section className="space-y-12">
           <div className="section-wrap text-center md:text-left">
-            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">Let&apos;s get in touch.</h1>
-            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:mx-0">
+            <h1 className="page-title">Let&apos;s get in touch.</h1>
+            <p className="section-lead mx-auto mt-5 max-w-3xl md:mx-0">
               Share project ideas, job opportunities, or anything else! I&apos;ll reply ASAP.
             </p>
           </div>
 
           <div className="section-rule grid gap-8 lg:grid-cols-[0.9fr_1.7fr]">
             <aside>
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">Overview</p>
-              <div className="mt-5 space-y-4 text-sm">
-                <div className="border-l-2 border-border pl-3">
-                  <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Contact</p>
-                  <p className="mt-1 font-medium">Adam Ryu</p>
+              <p className="meta-label">Overview</p>
+              <div className="mt-5 space-y-5">
+                <div className="border-l-[3px] border-foreground/20 pl-4">
+                  <p className="meta-label">Contact</p>
+                  <p className="mt-1.5 text-lg font-bold">Adam Ryu</p>
                 </div>
-                <div className="border-l-2 border-border pl-3">
-                  <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Location</p>
-                  <p className="mt-1 font-medium">College Station, TX</p>
+                <div className="border-l-[3px] border-foreground/20 pl-4">
+                  <p className="meta-label">Location</p>
+                  <p className="mt-1.5 text-lg font-bold">College Station, TX</p>
                 </div>
-                <div className="border-l-2 border-border pl-3">
-                  <p className="text-xs uppercase tracking-[0.1em] text-muted-foreground">Response time</p>
-                  <p className="mt-1 font-medium">Within 24 hours</p>
+                <div className="border-l-[3px] border-foreground/20 pl-4">
+                  <p className="meta-label">Response time</p>
+                  <p className="mt-1.5 text-lg font-bold">Within 24 hours</p>
                 </div>
               </div>
             </aside>
@@ -73,49 +73,49 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
-                    <label htmlFor="name" className="mb-2 block text-sm font-medium">Name *</label>
+                    <label htmlFor="name" className="field-label">Name *</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       required
-                      className="w-full border border-input bg-background px-3 py-3 text-sm outline-none ring-0 transition-colors focus:border-foreground"
+                      className="field-input"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="mb-2 block text-sm font-medium">Email *</label>
+                    <label htmlFor="email" className="field-label">Email *</label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       required
-                      className="w-full border border-input bg-background px-3 py-3 text-sm outline-none ring-0 transition-colors focus:border-foreground"
+                      className="field-input"
                       placeholder="you@company.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="mb-2 block text-sm font-medium">Subject *</label>
+                  <label htmlFor="subject" className="field-label">Subject *</label>
                   <input
                     type="text"
                     id="subject"
                     name="_subject_custom"
                     required
-                    className="w-full border border-input bg-background px-3 py-3 text-sm outline-none ring-0 transition-colors focus:border-foreground"
+                    className="field-input"
                     placeholder="What are you working on?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium">Message *</label>
+                  <label htmlFor="message" className="field-label">Message *</label>
                   <textarea
                     id="message"
                     name="message"
                     required
                     rows={6}
-                    className="w-full resize-none border border-input bg-background px-3 py-3 text-sm outline-none ring-0 transition-colors focus:border-foreground"
+                    className="field-input resize-none"
                     placeholder="Briefly describe goals, constraints, and timeline."
                   />
                 </div>
@@ -129,7 +129,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="inline-flex w-full items-center justify-center border border-accent/45 bg-accent/15 px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent hover:bg-accent/25 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="action-link action-link--accent w-full justify-center disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
@@ -148,7 +148,7 @@ export default function Contact() {
           </div>
 
           <div className="section-rule flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-muted-foreground">Prefer social channels?</p>
+            <p className="body-copy">Prefer social channels?</p>
             <div className="flex flex-wrap gap-3">
               <a href="https://github.com/adavidryu" target="_blank" rel="noopener noreferrer" className="action-link">
                 GitHub
@@ -163,15 +163,15 @@ export default function Contact() {
 
       {isSubmitted && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4">
-          <div className="w-full max-w-md border border-border bg-background p-8">
+          <div className="w-full max-w-md border-2 border-foreground/15 bg-background p-8">
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center border border-border bg-secondary">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center border-2 border-foreground/15 bg-secondary">
                 <svg className="h-7 w-7 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="mb-2 text-xl font-semibold">Message sent</h3>
-              <p className="mb-6 text-sm text-muted-foreground">
+              <h3 className="mb-2 text-2xl font-bold">Message sent</h3>
+              <p className="body-copy mb-6">
                 Thanks for reaching out. I will get back to you within 24 hours.
               </p>
               <button

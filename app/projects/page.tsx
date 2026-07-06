@@ -37,10 +37,10 @@ export default function Projects() {
       <ContentArea>
         <section className="space-y-12">
           <div className="section-wrap text-center md:text-left">
-            <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
+            <h1 className="page-title">
               Passion projects and hackathon builds.
             </h1>
-            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:mx-0">
+            <p className="section-lead mx-auto mt-5 max-w-3xl md:mx-0">
               A sneak peek into problems I&apos;ve attacked, the innovative solutions, and my technical skills.
             </p>
           </div>
@@ -55,15 +55,14 @@ export default function Projects() {
                 highlight={project.highlight}
                 githubUrl={project.githubUrl}
                 imageUrl={project.imageUrl}
-                award={project.award}
               />
             ))}
           </div>
 
           <div className="section-rule flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <div>
-              <h3 className="text-2xl font-semibold">Need help building something?</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
+              <h3 className="section-title text-2xl md:text-3xl">Need help building something?</h3>
+              <p className="body-copy mt-3">
                 I&apos;d love to hear your ideas and contribute to something great.
               </p>
             </div>

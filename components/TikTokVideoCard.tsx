@@ -36,7 +36,7 @@ export default function TikTokVideoCard({ video }: TikTokVideoCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={video.title}
-      className="group relative block aspect-[9/16] overflow-hidden rounded-xl bg-muted ring-1 ring-border/50 transition-all hover:ring-border hover:shadow-sm"
+      className="group relative block aspect-[9/16] overflow-hidden border-2 border-foreground/15 bg-muted transition-colors hover:border-foreground/35"
       onMouseEnter={() => setPreview(true)}
       onMouseLeave={() => setPreview(false)}
       onFocus={() => setPreview(true)}

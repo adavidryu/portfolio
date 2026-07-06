@@ -21,20 +21,20 @@ export default function Garage() {
 
           {/* ── Hero ─────────────────────────────────────────── */}
           <section className="section-wrap text-center md:text-left">
-            <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-tight md:mx-0 md:text-5xl">
+            <h1 className="page-title mx-auto max-w-4xl md:mx-0">
               Wrenching on my Q50&nbsp;&amp;&nbsp;ZX&#8209;6R.
             </h1>
-            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:mx-0">
+            <p className="section-lead mx-auto mt-5 max-w-3xl md:mx-0">
               I handle my own maintenance, mods, and repairs — then turn it all into instructional short-form content
-              to help other DIYers at home. Houston-based. Always learning.
+              to help other DIYers at home. Always learning.
             </p>
 
             {/* Stats row */}
             <div className="mt-6 flex flex-wrap justify-center gap-4 md:justify-start">
               {stats.map((s) => (
-                <div key={s.label} className="rounded-lg bg-secondary/50 px-4 py-2.5 text-center ring-1 ring-border/50">
-                  <p className="text-lg font-semibold">{s.value}</p>
-                  <p className="mt-0.5 text-[11px] uppercase tracking-[0.1em] text-muted-foreground">{s.label}</p>
+                <div key={s.label} className="stat-block">
+                  <p className="text-2xl font-bold">{s.value}</p>
+                  <p className="meta-label mt-1">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -45,7 +45,7 @@ export default function Garage() {
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <p className="eyebrow">@q50ryu on TikTok</p>
-                <h2 className="mt-3 text-2xl font-semibold md:text-3xl">Latest videos</h2>
+                <h2 className="section-title mt-3">Latest videos</h2>
               </div>
               <a
                 href="https://www.tiktok.com/@q50ryu"
