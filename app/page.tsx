@@ -20,29 +20,30 @@ const professionalExperiences: ExperienceItem[] = [
     role: 'Software Engineer Intern',
     org: 'Toyota Financial Services',
     period: 'Mar 2026 – Present · Plano, TX',
-    summary: 'Joining the engineering team at Toyota\'s financial services hub to build and scale products used by Toyota customers across North America.',
+    summary:
+      'Building a GenAI-powered platform to automate manual review of ~6,000 insurance documents, targeting 1,000+ hours in annual time savings. Developing full-stack microfrontends and backend microservices on AWS, partnering with stakeholders to map current-state processes and define requirements for human-in-the-loop automation.',
     isMostRecent: true,
   },
   {
     role: 'Tech Fellow',
     org: 'CodePath',
-    period: 'Jan 2026 – Present',
+    period: 'Jan 2026 – Apr 2026',
     summary:
-      'Supporting 500+ students in technical interview prep, enhancing their practical data structures, algorithms, and programming skills.',
+      'Supported 500+ students through TIP101 — a 10-week technical interview prep course covering Python, DSA, Big O, and core coding patterns. Facilitated weekly labs, coached students on hash maps, trees, linked lists, and recursion, and collected feedback to continuously improve learning outcomes.',
   },
   {
     role: 'Software Engineer Intern',
     org: 'Texas A&M University',
     period: 'May 2025 – Aug 2025',
     summary:
-      'Led a 4-person team to build a full-stack, market-ready fitness form correction app using MediaPipe computer vision, an LLM, and modern frameworks.',
+      'Built an AI yoga form-correction app from concept to commercial-ready MVP — shipping a real-time computer vision feedback loop with MediaPipe. Developed the full stack with Next.js, Supabase, PostgreSQL, and Gemini API. Led a 4-person Agile team to 100% on-time milestone delivery and cut pose-tracking jitter by 50% with a custom smoothing algorithm.',
   },
   {
     role: 'Software Engineer Fellow',
     org: 'Headstarter',
     period: 'Jul 2024 – Sep 2024',
     summary:
-      'Built 4 AI projects using Next.js and modern tools through Headstarter, sharpening skills via project-based learning, competitions, networking, and career development.',
+      'Shipped 4 AI-driven Next.js web apps to Vercel, integrating Firebase and Material UI for polished UIs. Cranked out hackathon MVPs in 36–48 hours, placing Top 20 out of 550 teams with a live end-to-end demo.',
   },
 ];
 
